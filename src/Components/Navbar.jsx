@@ -5,26 +5,17 @@ import { IoMdNotifications } from "react-icons/io";
 export default function Navbar() {
   return (
     <div className="flex items-start justify-between mb-6 px-10 py-4">
-      
-      {/* Left Side */}
       <div>
-        {/* Breadcrumb */}
         <div className="text-sm text-slate-400">
           <span className="text-slate-500">Pages</span>
           <span className="mx-2">/</span>
           <span className="text-slate-700 font-medium">Dashboard</span>
         </div>
 
-        {/* Title */}
-        <h1 className="text-2xl font-bold text-slate-800 mt-1">
-          Dashboard
-        </h1>
+        <h1 className="text-2xl font-bold text-slate-800 mt-1">Dashboard</h1>
       </div>
 
-      {/* Right Side */}
       <div className="flex items-center gap-4">
-        
-        {/* Search */}
         <div className="relative">
           <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
@@ -34,7 +25,6 @@ export default function Navbar() {
           />
         </div>
 
-        {/* Sign In */}
         <div className="flex items-center gap-1 text-sm text-[#718096] cursor-pointer">
           <IoPerson className="w-4 h-4" />
           <span className="font-bold text-sm">Sign In</span>

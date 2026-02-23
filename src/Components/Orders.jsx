@@ -56,7 +56,7 @@ export default function Orders() {
   return (
     <div className="bg-white rounded-2xl p-6 shadow-[0px_3.5px_5.5px_0px_#00000005]">
       
-      {/* Header */}
+   
       <h2 className="text-lg font-bold text-slate-800">
         Orders overview
       </h2>
@@ -65,12 +65,12 @@ export default function Orders() {
         <span className="text-slate-400">this month</span>
       </p>
 
-      {/* Timeline */}
+
       <div className="mt-6 space-y-8">
         {orders.map((item) => (
           <div key={item.id} className="flex gap-2 relative">
             
-            {/* Icon + vertical line */}
+          
             <div className="flex flex-col items-center">
               <div
                 className={`w-10 h-10 flex items-center justify-center rounded-lg  ${item.color}`}
@@ -82,7 +82,7 @@ export default function Orders() {
               )}
             </div>
 
-            {/* Content */}
+        
             <div>
               <p className="text-sm font-semibold text-slate-700">
                 {item.title}

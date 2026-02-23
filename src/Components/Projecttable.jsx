@@ -1,23 +1,22 @@
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { SiAdobexd , SiSlack, SiSpotify } from "react-icons/si";
+import { SiAdobexd, SiSlack, SiSpotify } from "react-icons/si";
 import { FaAtlassian, FaLinkedin } from "react-icons/fa";
 import { DiGoogleDrive } from "react-icons/di";
 import member from "../assets/images/members/member.svg";
 import member4 from "../assets/images/members/member4.svg";
 import member5 from "../assets/images/members/member5.svg";
 
-
 export default function Projecttable() {
-    const memberImages = {
-  2: member,
-  4: member4,
-  5: member5,
-};
+  const memberImages = {
+    2: member,
+    4: member4,
+    5: member5,
+  };
   const projects = [
     {
       id: 1,
-      icon: <SiAdobexd  className="text-fuchsia-600" size={22} />,
+      icon: <SiAdobexd className="text-fuchsia-600" size={22} />,
       name: "Chakra Soft UI Version",
       members: 5,
       budget: "$14,000",
@@ -25,7 +24,7 @@ export default function Projecttable() {
     },
     {
       id: 2,
-      icon: <FaAtlassian className="text-blue-500"size={22} />,
+      icon: <FaAtlassian className="text-blue-500" size={22} />,
       name: "Add Progress Track",
       members: 2,
       budget: "$3,000",
@@ -33,7 +32,7 @@ export default function Projecttable() {
     },
     {
       id: 3,
-      icon: <SiSlack className="text-yellow-500" size={22}/>,
+      icon: <SiSlack className="text-yellow-500" size={22} />,
       name: "Fix Platform Errors",
       members: 2,
       budget: "Not set",
@@ -41,7 +40,7 @@ export default function Projecttable() {
     },
     {
       id: 4,
-      icon: <SiSpotify className="text-green-500" size={22}/>,
+      icon: <SiSpotify className="text-green-500" size={22} />,
       name: "Launch our Mobile App",
       members: 4,
       budget: "$32,000",
@@ -49,7 +48,7 @@ export default function Projecttable() {
     },
     {
       id: 5,
-      icon: <DiGoogleDrive className="text-blue-600" size={22}/>,
+      icon: <DiGoogleDrive className="text-blue-600" size={22} />,
       name: "Add the New Pricing Page",
       members: 5,
       budget: "$400",
@@ -66,7 +65,6 @@ export default function Projecttable() {
   ];
   return (
     <div className="bg-white rounded-2xl p-6 shadow-[0px_3.5px_5.5px_0px_#00000005]  bg-white/80 rounded-[15px] ">
-      {/* Header */}
       <div className="flex justify-between items-start">
         <div>
           <h2 className="text-lg font-bold text-slate-800">Projects</h2>
@@ -78,9 +76,7 @@ export default function Projecttable() {
         <BsThreeDotsVertical className="text-slate-400 cursor-pointer" />
       </div>
 
-      {/* Table */}
       <div className="mt-6 ">
-        {/* Table Head */}
         <div className="grid grid-cols-4 text-xs text-slate-400 font-semibold pb-3 border-b">
           <div>COMPANIES</div>
           <div>MEMBERS</div>
@@ -88,13 +84,11 @@ export default function Projecttable() {
           <div>COMPLETION</div>
         </div>
 
-        {/* Rows */}
         {projects.map((project) => (
           <div
             key={project.id}
             className="grid grid-cols-4 items-center py-4 border-b last:border-none"
           >
-            {/* Company */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 flex items-center justify-center  rounded-md">
                 {project.icon}
@@ -104,22 +98,18 @@ export default function Projecttable() {
               </span>
             </div>
 
-            {/* Members (Dummy avatars stacked) */}
-            {/* Members Image Based on Count */}
             <div>
-             <img
-  src={memberImages[project.members]}
-  alt="members"
-  className="h-8 object-contain"
-/>
+              <img
+                src={memberImages[project.members]}
+                alt="members"
+                className="h-8 object-contain"
+              />
             </div>
 
-            {/* Budget */}
             <div className="text-sm font-semibold text-slate-700">
               {project.budget}
             </div>
 
-            {/* Completion */}
             <div>
               <p className="text-sm font-semibold text-teal-500 mb-1">
                 {project.progress}%
